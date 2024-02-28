@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Site Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <header id="top-navbar">
+            <div class="nav-controls">
+                <button class="backforward-button" onclick="navigateBackward()"><span class="symbol">􀰌</span></button>
+                <button class="backforward-button" onclick="navigateForward()"><span class="symbol">􀰑</span></button>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-button" onclick="showAddMemberForm()">Add a Member</button>
+            </div>
+        </header>
+        <div id="sidebar">
+        <p class="sidebar-title">
+            <span class="symbol" id="symbol1"></span>
+            <span class="title-text">HSM Index</span>
+        </p>
+        <div class="search-container">
+            <button id="search-btn" class="search-btn">􀊫</button>
+            <input type="text" id="search-input" class="search-input" placeholder="Search...">
+        </div>
+        <div class="nav-button" id='addandremove' onclick="showPlaceholder('Add and Remove')"><span class="symbol" id="addplus">􀅼</span>Add and Remove</div>
+        <p class="nav-title"><span class="symbol">􀎫</span>Explore by Location</p>
+
+        <div class="nav-button sub-item" onclick="showPlaceholder('North America')">North America</div>
+        <div class="nav-button sub-item" onclick="showPlaceholder('Europe')">Europe</div>
+        <div class="nav-button sub-item" onclick="showPlaceholder('Asia')">Asia</div>
+        <div class="nav-button sub-item" onclick="showPlaceholder('Africa')">Africa</div>
+        <div class="divider"></div>
+        <div class="nav-button" onclick="showPlaceholder('Contact Cards')"><span class="symbol">􀏻</span>Contact Cards</div>
+        <div class="nav-button" onclick="showPlaceholder('Complete List')"><span class="symbol">&#xf025F;</span>Complete List</div>
+        <div class="nav-button" onclick="showPlaceholder('Ideas for HSM')"><span class="symbol">&#xf0265;</span>Ideas for HSM</div>
+        <div class="nav-button" onclick="showPlaceholder('By Follower Count')"><span class="symbol">􂃧</span>By Follower Count</div>
+        <div class="nav-button" onclick="showPlaceholder('New Members')"><span class="symbol">􀜕</span>New Members</div>
+        <div class="divider"></div>
+        <p class="nav-title"><span class="symbol">􀎫</span>City Updates</p>
+        <div class="nav-button sub-item" onclick="showPlaceholder('Member Cities')"> Member Cities</div>
+        <div class="nav-button sub-item" onclick="showPlaceholder('Candidate Cities')"> Candidate Cities</div>
+        <div class="divider"></div>
+        <div class="nav-button" onclick="showPlaceholder('Feedback')"><span class="symbol">&#xf0266;</span> Feedback</div>
+    </div>
+    <div id="main-content">
+        <div class="morphing">
+            <div class="word" id="english">Headshots Matter</div>
+            <div class="word" id="japanese">頭部撮影は重要です</div>
+            <div class="word" id="arabic">الصور الشخصية مهمة</div>
+            <div class="word" id="hebrew">צילומי ראש חשובים</div>
+            <div class="word" id="afrikaans">Kopfoto's is belangrik</div>
+            <div class="word" id="italian">I primi piani sono importanti</div>
+            <div class="word" id="dutch">Hoofdfoto's zijn belangrijk</div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html> 
+
+
+
+    

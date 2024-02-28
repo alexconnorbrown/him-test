@@ -1,0 +1,343 @@
+
+
+
+body {
+  font-size: 16px;
+  background: white;
+  /* Updated to remove width and display styles that conflict with the container */
+  margin: 0; /* Ensure body has no margin */
+  padding: 0; /* Ensure body has no padding */
+  box-sizing: border-box; 
+  line-height: 0;/* Ensure padding does not affect the body's width */
+}
+
+#top-navbar {
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  left: 275px;
+  height: 50px; /* Adjusted height */
+  align-items: center;
+  background-color: #fffefd; /* Lighter background */
+  z-index: 1000; /* Ensure navbar is on top */
+ /* Padding on sides */
+
+}
+
+#top-navbar .nav-button {
+  background-color: #ffffff; /* White background for buttons */
+  border: 1px solid #ccc; /* Light border for definition */
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: SF Pro;
+  border-radius: 5px; /* Rounded corners for aesthetics */
+  margin-right: 8px; /* Space between buttons */
+}
+
+#top-navbar .nav-button:hover {
+  background-color: #e7e7e7; /* Slightly darker on hover for feedback */
+}
+
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px; /* Adjusted width for consistency */
+  height:100vh;
+  background: #fffefd;
+  position: fixed;
+  padding-left: 20px; 
+  padding-top: 20px;/* Below the navbar */
+  box-shadow: 4px 0 2dvi rgba(22, 20, 18, 0.08);
+}
+#main-content {
+  margin-left: 250px; /* Adjusted to make space for sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjusted width */
+  min-height: 1000vh;
+  box-sizing: border-box;
+  position: sticky;
+}
+
+.nav-button {
+  font-size: 14px;
+  font-weight: 500; /* Matching nav-button font size for consistency */
+  background-color: transparent; /* Ensure background matches sidebar */
+  color: rgba(0, 0, 0, 0.741); /* Matching nav-button text color */
+  border: 0px black; /* Ensures no border */
+  display: flex;
+  height:25px;
+  font-family: SF Pro;
+  align-items: center;
+  justify-content: flex;
+  transition: 0.1s ease-in-out;
+  box-sizing: border-box;
+}
+.nav-button, .nav-forwardbackbutton, .mainnav-title, .nav-title, .sub-item, .sidebar-title {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  color: #333; /* Darker for better readability */
+}
+
+.nav-button:hover, .nav-forwardbackbutton:hover {
+  background-color: #f0f0f0; /* Consistent hover effect */
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: SF Pro;
+  src: url(SF-Pro.ttf);
+}
+@font-face {
+  font-family: SF-Pro Display;
+  src: url(SF-Pro-Display-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SF-Pro Display;
+  src: url(SF-Pro-Display-Medium.otf);
+  font-weight: 500; /* 500 is typically the weight for 'medium' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SF-Pro Display;
+  src: url(SF-Pro-Display-Light.otf);
+  font-weight: 300; /* 300 is typically the weight for 'light' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SF-Pro Display;
+  src: url(SF-Pro-Display-Bold.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: SF-Mono;
+  src: url(SF-Mono-Regular.otf);
+}
+
+.mainnav-title {
+  font-size: 14px;
+  font-family: SF-Pro;
+  font-weight: 500; /* Matching nav-button font size for consistency */
+ /* Padding to align with the buttons */
+/* Indent title to align with button text */
+  background-color: transparent; /* Ensure background matches sidebar */
+  color: rgb#000000; /* Matching nav-button text color */
+  border: none; /* Ensures no border */ /* Adjust the top margin as needed */ /* Adjust the bottom margin as needed */
+}
+.nav-title {
+  font-size: 14px;
+  font-family: SF Pro;
+  font-weight: 500; /* Matching nav-button font size for consistency */
+ /* Padding to align with the buttons */
+/* Indent title to align with button text */
+  background-color: transparent; /* Ensure background matches sidebar */
+  color: rgba(0, 0, 0, 0.911); /* Matching nav-button text color */
+  border: none;/* Adjust the top margin as needed */ /* Adjust the bottom margin as needed */
+}
+
+.sub-item {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.741);
+  cursor: pointer;
+  padding-left: 30px;
+  /* Further indent submenu items for visual hierarchy */
+}
+
+.sidebar-title {
+  font-size: 20px;
+  font-family: SF Pro;
+  font-weight:600;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin-top:5px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.backforward-button {
+  font-family: SF Pro;
+  font-weight: bolder;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.437);
+}
+
+.symbol {
+  display: inline-block;/* Adjust this value as needed */
+  margin-right: 10px;
+  font-family: SF Pro;
+  width: 20px;
+  position: relative;
+  text-align: right;
+}
+
+#symbol1 {
+  font-size: 45px;
+  position: absolute;
+  font-family: SF Pro;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  margin-top:5px;
+  margin-left:85px;
+  color: rgb(0, 0, 0)
+}
+.morphing {
+  font-weight: bold;
+  font-family: SF Pro;
+  font-size: 30px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding-top: 50px;
+  min-height: 85px;
+  min-width: 70%;
+  filter: contrast(25) blur(0.1px) saturate(0);
+  display:block; 
+  overflow:hidden;/* Add flex display */
+  align-items:center;
+  position: fixed;
+  top: 129px;
+  left: 320px;
+   /* Center vertically *//
+}
+
+.word {
+  position: absolute;
+  -webkit-animation: word 16s infinite ease-in-out;
+          animation: word 16s infinite ease-in-out;   
+}
+.word:nth-child(1) {
+  -webkit-animation-delay: -16s;
+          animation-delay: -16s;
+}
+.word:nth-child(2) {
+  -webkit-animation-delay: -14s;
+          animation-delay: -14s;
+}
+.word:nth-child(3) {
+  -webkit-animation-delay: -12s;
+          animation-delay: -12s;
+}
+.word:nth-child(4) {
+  -webkit-animation-delay: -10s;
+          animation-delay: -10s;
+}
+.word:nth-child(5) {
+  -webkit-animation-delay: -8s;
+          animation-delay: -8s;
+}
+.word:nth-child(6) {
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+}
+.word:nth-child(7) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('SF-Pro.ttf');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('SF-Pro-Display-Bold.otf');
+}
+
+@font-face {
+  font-family: 'SF Mono';
+  src: url('SF-Mono-Regular.otf');
+}
+
+@keyframes word {
+  75%, 100% {
+    filter: blur(0px);
+    opacity: 0.8;
+  }
+  25%,75% {
+    filter: blur(0.7em);
+    opacity: 0
+  }
+
+}
+
+.backforward-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.backforward-button .symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backforward-button {
+  background-color: gay;
+  border: none; /* Remove border */
+  cursor: pointer;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+/* style.css */
+
+.search-container {
+  display: flex;
+  align-items: left; /* Align items vertically */
+  justify-content: flex-start; /* Align items to the start of the container */
+  margin-bottom:0px; /* Adjust based on your layout */
+  font-family: 'SF Pro', Arial, sans-serif;
+}
+
+.search-btn {
+  cursor: pointer;
+  padding-left: 0;
+  margin-right: 10px;
+  width: 20px;
+  font-family: SF Pro;
+  font-size: 16px; /* Adjust to match your symbol sizes */
+  background: transparent;
+  border: none;
+  display: flex;
+  text-align: right; /* Ensures vertical alignment */
+  justify-content: center;
+  transition: font-size 0.4s ease-in-out; /* Centers the content (if your button is an icon) */
+}
+#addandremove{
+  margin-bottom: 25px;
+}
+#addplus {
+  font-size: 17px;
+}
+
+.search-input {
+ /* Allows the input field to take up available space */
+  width: 150px; /* Start with a width of 0 and expand on focus or button click */ /* Spacing between button and input */
+  border: none;/* Stylish underline effect */
+  outline:none;
+  font-size: 14px;
+  text-transform: lowercase;
+  font-family: SF Pro;
+  transition: width 0.4s ease-in-out;
+  opacity: 1; /* Start invisible and become visible on focus or button click */
+  transition: opacity 0.4s ease-in-out, width 0.4s ease-in-out;
+  cursor:default;
+}
+/* On focus or active, adjust width and opacity */
+.search-input:hover {
+  width: 200px; /* Adjust based on your design */
+}
+.search-btn:hover {
+  font-size: 20px; /* Adjust based on your design */
+}
